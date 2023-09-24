@@ -6,7 +6,7 @@
 /*   By: elisa <elisa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 17:23:43 by elisa             #+#    #+#             */
-/*   Updated: 2023/09/24 18:53:46 by elisa            ###   ########.fr       */
+/*   Updated: 2023/09/24 19:30:32 by elisa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ void	check_death(t_table *table)
 		{
 			if (table->philos[i].eat == 0)
 			{
-				pthread_mutex_lock(&table->times[i]);
 				if (actual_time() - table->philos[i].time_eat
 					>= table->dead_time)
 				{
@@ -66,7 +65,6 @@ void	check_death(t_table *table)
 					table->dead = 1;
 					return ;
 				}
-				pthread_mutex_unlock(&table->times[i]);
 			}
 			i++;
 		}

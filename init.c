@@ -6,7 +6,7 @@
 /*   By: elisa <elisa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 17:13:13 by elisa             #+#    #+#             */
-/*   Updated: 2023/09/24 18:50:04 by elisa            ###   ########.fr       */
+/*   Updated: 2023/09/24 19:29:49 by elisa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,6 @@ int	init_philo(t_table *table)
 
 	i = 0;
 	table->philos = malloc(sizeof (t_philo) * (table->philo_num));
-	table->times = malloc(sizeof (pthread_mutex_t) * table->philo_num);
 	while (i < table->philo_num)
 	{
 		table->philos[i].id = i + 1;
@@ -92,7 +91,6 @@ int	init_forks(t_table *table)
 	{
 		while (i < table->philo_num)
 		{
-			pthread_mutex_init(&table->times[i], NULL);
 			pthread_mutex_init(table->philos[i].l_fork, NULL);
 			if (i + 1 == table->philo_num)
 				table->philos[i].r_fork = table->philos[0].l_fork;

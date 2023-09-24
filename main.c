@@ -6,7 +6,7 @@
 /*   By: elisa <elisa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 14:46:17 by elisa             #+#    #+#             */
-/*   Updated: 2023/09/24 18:55:54 by elisa            ###   ########.fr       */
+/*   Updated: 2023/09/24 19:30:42 by elisa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ void	ft_exit(t_table *table)
 		i++;
 	}
 	pthread_mutex_destroy(&table->lock);
-	pthread_mutex_destroy(&table->times);
 	free(table->philos);
 	free(table->tid);
 }

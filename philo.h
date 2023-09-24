@@ -6,7 +6,7 @@
 /*   By: elisa <elisa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 14:19:51 by elisa             #+#    #+#             */
-/*   Updated: 2023/09/24 18:44:25 by elisa            ###   ########.fr       */
+/*   Updated: 2023/09/24 19:31:06 by elisa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ typedef struct s_table
 	pthread_mutex_t	lock;
 	pthread_mutex_t	write;
 	pthread_mutex_t	*forks;
-	pthread_mutex_t	*times;
 }	t_table;
 
 /*******************FONCTIONS*******************/
