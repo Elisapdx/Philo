@@ -6,7 +6,7 @@
 /*   By: elisa <elisa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 14:19:51 by elisa             #+#    #+#             */
-/*   Updated: 2023/09/27 15:03:07 by elisa            ###   ########.fr       */
+/*   Updated: 2023/09/27 15:32:45 by elisa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,7 @@ typedef struct s_philo
 {
 	struct s_table	*table;
 	int				eat;
-	int				eat_times;
-	pthread_mutex_t		eat_count;
+	int				eat_count;
 	int				id;
 	long int		time_eat;
 	pthread_mutex_t	*r_fork;

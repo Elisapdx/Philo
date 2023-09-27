@@ -6,7 +6,7 @@
 /*   By: elisa <elisa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 17:13:13 by elisa             #+#    #+#             */
-/*   Updated: 2023/09/27 15:04:03 by elisa            ###   ########.fr       */
+/*   Updated: 2023/09/27 15:32:55 by elisa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ int	init_philo(t_table *table)
 	while (i < table->philo_num)
 	{
 		table->philos[i].id = i + 1;
-		table->philos[i].eat_times = 0;
+		table->philos[i].eat_count = 0;
 		table->philos[i].l_fork = malloc(sizeof (pthread_mutex_t) * 1);
 		table->philos[i].table = table;
 		table->philos[i].time_eat = actual_time();
