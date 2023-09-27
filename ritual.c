@@ -6,7 +6,7 @@
 /*   By: elisa <elisa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 14:32:37 by elisa             #+#    #+#             */
-/*   Updated: 2023/09/24 19:30:12 by elisa            ###   ########.fr       */
+/*   Updated: 2023/09/27 15:04:28 by elisa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,14 @@ void	drop_forks(t_philo *philo)
 void	eat(t_philo *philo)
 {
 	take_forks(philo);
+	pthread_mutex_lock(&philo->eat_count);
 	philo->time_eat = actual_time();
 	write_status("is eating", philo);
+	pthread_mutex_unlock(&philo->eat_count);
 	philo->eat = 1;
 	ft_usleep(philo->table->eat_time);
 	philo->eat = 0;
-	philo->eat_count++;
+	philo->eat_times++;
 	drop_forks(philo);
 }
 

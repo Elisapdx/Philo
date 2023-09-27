@@ -6,7 +6,7 @@
 /*   By: elisa <elisa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 17:23:43 by elisa             #+#    #+#             */
-/*   Updated: 2023/09/24 19:30:32 by elisa            ###   ########.fr       */
+/*   Updated: 2023/09/27 15:06:02 by elisa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	check_eat(t_table *table)
 		return (0);
 	while (i < table->philo_num)
 	{
-		if (table->philos[i].eat_count < table->meals_nb)
+		if (table->philos[i].eat_times < table->meals_nb)
 			return (0);
 		i++;
 	}
